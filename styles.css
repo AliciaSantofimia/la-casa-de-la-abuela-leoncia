@@ -75,7 +75,7 @@ button,
   justify-content: space-between;
   padding: 1rem 1.25rem;
   transition: background 0.4s var(--ease), backdrop-filter 0.4s, color 0.3s;
-  color: var(--white);
+  color: var(--ink);
 }
 
 .nav.is-solid {
@@ -125,7 +125,8 @@ button,
   transition: background 0.3s, color 0.3s;
 }
 
-.nav.is-solid .nav__cta {
+.nav.is-solid .nav__cta,
+.nav .nav__cta {
   background: var(--olive-deep);
   color: var(--white);
   border-color: var(--olive-deep);
@@ -146,7 +147,7 @@ button,
   min-height: 100svh;
   display: grid;
   align-items: end;
-  color: var(--white);
+  color: var(--ink);
   overflow: hidden;
   background: #f3efe6;
 }
@@ -241,7 +242,13 @@ button,
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(26, 28, 24, 0.12) 0%, rgba(26, 28, 24, 0.05) 45%, rgba(26, 28, 24, 0.72) 100%);
+    linear-gradient(
+      180deg,
+      rgba(243, 239, 230, 0.15) 0%,
+      rgba(243, 239, 230, 0.2) 38%,
+      rgba(243, 239, 230, 0.72) 68%,
+      rgba(243, 239, 230, 0.94) 100%
+    );
   pointer-events: none;
 }
 
@@ -253,6 +260,7 @@ button,
   margin: 0 0 1.1rem;
   letter-spacing: -0.02em;
   max-width: 14ch;
+  color: var(--ink);
 }
 
 .hero__content {
@@ -272,7 +280,8 @@ button,
   font-size: 0.75rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  opacity: 0.85;
+  color: var(--olive);
+  opacity: 1;
   margin: 0 0 1rem;
 }
 
@@ -280,9 +289,10 @@ button,
   font-size: clamp(1rem, 2.2vw, 1.35rem);
   max-width: 28rem;
   margin: 0 0 0.85rem;
-  opacity: 0.92;
+  opacity: 1;
   font-weight: 400;
   line-height: 1.45;
+  color: var(--ink-soft);
 }
 
 .hero__meta {
@@ -291,8 +301,8 @@ button,
   font-size: clamp(0.72rem, 1.5vw, 0.82rem);
   letter-spacing: 0.06em;
   line-height: 1.55;
-  opacity: 0.72;
-  color: inherit;
+  opacity: 1;
+  color: var(--text-muted);
 }
 
 .hero__actions {
@@ -338,6 +348,17 @@ button,
   background: transparent;
   color: var(--white);
   border-color: rgba(255, 255, 255, 0.45);
+}
+
+.hero .btn--light {
+  background: var(--olive-deep);
+  color: var(--white);
+  border-color: var(--olive-deep);
+}
+
+.hero .btn--ghost {
+  color: var(--ink);
+  border-color: rgba(26, 28, 24, 0.32);
 }
 
 .btn--dark {
