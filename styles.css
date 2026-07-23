@@ -151,6 +151,37 @@ button,
   background: #f3efe6;
 }
 
+/* Hero móvil: un poco más bajo para anticipar la siguiente sección */
+@media (max-width: 819px) {
+  .hero {
+    min-height: 87svh;
+  }
+
+  .hero__media img {
+    object-position: center 34%;
+  }
+
+  .hero__content {
+    padding-bottom: 2.75rem;
+  }
+
+  .hero__place {
+    margin-bottom: 0.85rem;
+  }
+
+  .hero__lead {
+    margin-bottom: 0.7rem;
+  }
+
+  .hero__meta {
+    margin-bottom: 1.2rem;
+  }
+
+  .hero__scroll {
+    bottom: 1.15rem;
+  }
+}
+
 .hero__media {
   position: absolute;
   inset: 0;
@@ -622,6 +653,25 @@ button,
 }
 
 @media (max-width: 899px) {
+  .possibilities {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .possibilities > .reveal {
+    display: contents;
+  }
+
+  .plan-visual {
+    order: 1;
+  }
+
+  .plan-note {
+    order: 2;
+    margin-top: 0;
+  }
+
   .plan-diagram {
     max-width: 18rem;
   }
@@ -1274,6 +1324,107 @@ button,
 
 .tiempo--futuro .vision-thumbs {
   margin-bottom: 0.85rem;
+}
+
+/* Tres tiempos — móvil: reportaje continuo (desktop intacto) */
+@media (max-width: 899px) {
+  #la-casa.section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.75rem;
+  }
+
+  #la-casa .film-intro {
+    margin-bottom: 1.65rem;
+  }
+
+  #la-casa .tiempos {
+    gap: 2.15rem;
+  }
+
+  #la-casa .tiempos__duo--now {
+    gap: 2.15rem;
+  }
+
+  #la-casa .tiempo__head,
+  #la-casa .tiempo--es .tiempo__head,
+  #la-casa .tiempo--futuro .tiempo__head {
+    margin-bottom: 0.95rem;
+  }
+
+  /* Misma franja visual para carrusel, vídeos y galería */
+  #la-casa .carousel,
+  #la-casa .tiempo__videos,
+  #la-casa .vision-thumbs {
+    width: calc(100% + 2.8rem);
+    max-width: none;
+    margin-left: -1.4rem;
+    margin-right: -1.4rem;
+  }
+
+  #la-casa .carousel__viewport {
+    background: transparent;
+    border: 0;
+    border-block: 1px solid var(--line);
+  }
+
+  #la-casa .carousel__track {
+    min-height: min(46vh, 400px);
+  }
+
+  #la-casa .carousel__slide {
+    padding: 0.55rem 0.55rem 1.7rem;
+  }
+
+  #la-casa .carousel__slide img {
+    max-height: min(42vh, 380px);
+    box-shadow: none;
+  }
+
+  #la-casa .carousel__cap {
+    left: 1.15rem;
+  }
+
+  #la-casa .carousel__controls {
+    margin-top: 0.7rem;
+    padding-inline: 1.4rem;
+  }
+
+  #la-casa .tiempo--es .tiempo__videos {
+    gap: 0.28rem;
+  }
+
+  #la-casa .tiempo--es .tiempo__player {
+    max-height: min(36vh, 300px);
+  }
+
+  #la-casa .tiempo__video figcaption {
+    margin-top: 0.4rem;
+    padding-inline: 0.85rem;
+  }
+
+  #la-casa .vision-thumbs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+
+  #la-casa .tiempo--futuro .vision-thumbs {
+    margin-bottom: 1rem;
+  }
+
+  #la-casa .vision-thumb {
+    border: 0;
+    background: var(--mist);
+  }
+
+  #la-casa .vision-thumb:hover,
+  #la-casa .vision-thumb:focus-visible {
+    transform: none;
+    box-shadow: none;
+  }
+
+  #la-casa .vision-chips {
+    gap: 0.4rem;
+  }
 }
 
 .vision-chips {
