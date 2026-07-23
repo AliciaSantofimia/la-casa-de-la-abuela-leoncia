@@ -1,0 +1,7 @@
+{
+  "name": "casa-abuela-leoncia",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/inject-site-url.js"
+  }
+}
